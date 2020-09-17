@@ -1,0 +1,47 @@
+{
+  "name": "ecommerce-start",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "author": "Yusuf Sargın",
+  "scripts": {
+    "dev": "nodemon src/main.ts",
+    "build:clean": "rimraf .next",
+    "build:ui": "npx next build",
+    "build:server": "npx tsc --project tsconfig.server.json && npx babel .next/production-server -d .next/production-server --extensions \".js\"",
+    "build": "yarn build:clean && yarn build:ui && yarn build:server",
+    "start": "cross-env NODE_ENV=production node .next/production-server/main.js"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.14.0",
+    "@nestjs/common": "^7.0.0",
+    "@nestjs/core": "^7.0.0",
+    "@nestjs/platform-express": "^7.0.0",
+    "@reduxjs/toolkit": "^1.1.0",
+    "@zeit/next-typescript": "^1.1.1",
+    "antd": "^4.6.3",
+    "axios": "^0.20.0",
+    "bootstrap": "^4.5.2",
+    "cross-env": "^6.0.3",
+    "moment": "^2.27.0",
+    "nest-next": "^9.1.0",
+    "next": "^9.5.2",
+    "react": "^16.13.1",
+    "react-bootstrap": "^1.3.0",
+    "react-dom": "^16.13.1",
+    "react-redux": "^7.1.3",
+    "reflect-metadata": "^0.1.13",
+    "rxjs": "^6.5.2",
+    "styled-components": "^5.2.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.5.5",
+    "@babel/core": "^7.5.5",
+    "@types/node": "^12.7.1",
+    "@types/react": "^16.9.1",
+    "nodemon": "^2.0.4",
+    "rimraf": "^3.0.0",
+    "ts-node": "^8.3.0",
+    "typescript": "^3.5.3"
+  }
+}
