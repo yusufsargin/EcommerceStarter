@@ -3,7 +3,7 @@ import React from "react";
 import styled from "styled-components";
 import ProductCard from "../Cards/ProductCard";
 
-interface CatalogItem {
+export interface CatalogItem {
   img?: string | any;
   title?: string;
   price?: number;
@@ -14,7 +14,7 @@ interface CatalogItem {
   href?: string;
 }
 
-interface CatalogProp {
+export interface CatalogProp {
   header: string;
   catalogs: CatalogItem[];
   size?: string;
@@ -38,6 +38,8 @@ export default function MainCatalog({ catalogs, header, size }: CatalogProp) {
         {catalogs?.map((item: CatalogItem, index: number) => {
           return (
             <ProductCard
+              key={index}
+              size={size}
               title={item.title}
               img={item.img}
               content={item.content}

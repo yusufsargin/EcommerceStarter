@@ -6,6 +6,7 @@ import MainCatalog from "ui/Components/Catalog/MainCatalog";
 import ProductCard from "ui/Components/Cards/ProductCard";
 import Furniture from "../../ui/Public/assets/furniture.jpg";
 import MainCampaign from "../../ui/Components/Campaign/MainCampaign";
+import LastViewedList from "ui/Components/Campaign/LastViewedList";
 
 interface Props {
   query: { name?: string };
@@ -64,7 +65,16 @@ const Index: NextPage<Props> = ({ query }) => {
 
       <MainCatalog
         header='Catalog'
+        size='small'
         catalogs={[
+          {
+            content: "Sofa",
+            img: require("../../public/assets/furniture.jpg"),
+          },
+          {
+            content: "Sofa",
+            img: require("../../public/assets/furniture.jpg"),
+          },
           {
             content: "Sofa",
             img: require("../../public/assets/furniture.jpg"),
@@ -77,6 +87,18 @@ const Index: NextPage<Props> = ({ query }) => {
       />
 
       <MainCampaign />
+      <LastViewedList
+        header='Last Viewed'
+        catalogs={[
+          {
+            title: "test",
+            img: require("../../public/assets/furniture.jpg"),
+            content: "test",
+            price: 200,
+            href: "#",
+          },
+        ]}
+      />
       <MainCampaign reverse />
     </div>
   );
