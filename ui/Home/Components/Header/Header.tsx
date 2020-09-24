@@ -12,7 +12,7 @@ const NavContainer = styled.div`
 export default function Header() {
   return (
     <NavContainer className='header p-3'>
-      <Row>
+      <Row className='align-items-center'>
         <Col>
           <a className='brand-logo'>
             <Title level={3}>Ecommerce</Title>
