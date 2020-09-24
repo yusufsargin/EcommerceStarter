@@ -13,13 +13,15 @@ export default function MainCampaign(props: any) {
   return (
     <Row className={`d-flex ${reverse && "flex-row-reverse"} justify-content-between align-items-center bg-secondary`}>
       <Col xs={6}>
-        <CampaignContainer>
-          <h3>Sell online with Furnith</h3>
-          <p>TEst test test</p>
-          <StyledButton color='#ff5d0d' roundSize={10} textColor='white'>
-            Sell on Furniture
-          </StyledButton>
-        </CampaignContainer>
+        <Container>
+          <CampaignContainer>
+            <h3>Sell online with Furnith</h3>
+            <p>TEst test test</p>
+            <StyledButton color='#ff5d0d' roundSize={10} textColor='white'>
+              Sell on Furniture
+            </StyledButton>
+          </CampaignContainer>
+        </Container>
       </Col>
       <Col xs={6} className='p-0'>
         <img width='100%' src={require("../../../../public/assets/furniture.jpg")} alt='Furniture' />

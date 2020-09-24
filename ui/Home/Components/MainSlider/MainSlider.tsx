@@ -1,5 +1,5 @@
 import { Button, Carousel, Space } from "antd";
-import { Col, Row } from "react-bootstrap";
+import { Col, Container, Row } from "react-bootstrap";
 import React from "react";
 import styled from "styled-components";
 
@@ -24,9 +24,9 @@ export default function MainSlider({ slider }: SliderProp) {
       }}>
       {slider?.map((item: SliderContentProp, index: number) => {
         return (
-          <div className='px-5' key={index}>
+          <Container key={index}>
             <Row className='justify-content-center align-items-center'>
-              <Col className='pr-5 text-center'>
+              <Col xs={6} className='text-center'>
                 <h4>{item.title}</h4>
                 <p>{item.description} </p>
                 <Button
@@ -40,18 +40,16 @@ export default function MainSlider({ slider }: SliderProp) {
                   Shop Now
                 </Button>
               </Col>
-              <Col className='p-2'>
-                <div>
-                  <img
-                    width='300px'
-                    height='100%'
-                    src='https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png'
-                    alt='text'
-                  />
-                </div>
+              <Col xs={6} className='pt-3'>
+                <img
+                  width='100%'
+                  height='100%'
+                  src='https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png'
+                  alt='text'
+                />
               </Col>
             </Row>
-          </div>
+          </Container>
         );
       })}
     </Carousel>
