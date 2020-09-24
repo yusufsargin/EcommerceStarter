@@ -1,12 +1,12 @@
 import * as React from "react";
 import { NextPage, NextPageContext } from "next";
-import Header from "../../ui/Components/Header/Header";
-import MainSlider from "ui/Components/MainSlider/MainSlider";
-import MainCatalog from "ui/Components/Catalog/MainCatalog";
-import ProductCard from "ui/Components/Cards/ProductCard";
-import Furniture from "../../ui/Public/assets/furniture.jpg";
-import MainCampaign from "../../ui/Components/Campaign/MainCampaign";
-import LastViewedList from "ui/Components/Campaign/LastViewedList";
+import Header from "../../ui/Home/Components/Header/Header";
+import MainSlider from "ui/Home/Components/MainSlider/MainSlider";
+import MainCatalog from "ui/Home/Components/Catalog/MainCatalog";
+import ProductCard from "ui/Home/Components/Cards/ProductCard";
+import MainCampaign from "../../ui/Home/Components/Campaign/MainCampaign";
+import LastViewedList from "ui/Home/Components/Campaign/LastViewedList";
+import { Container } from "react-bootstrap";
 
 interface Props {
   query: { name?: string };
@@ -14,7 +14,7 @@ interface Props {
 
 const Index: NextPage<Props> = ({ query }) => {
   return (
-    <div>
+    <Container fluid>
       <Header />
       <MainSlider
         slider={[
@@ -100,7 +100,7 @@ const Index: NextPage<Props> = ({ query }) => {
         ]}
       />
       <MainCampaign reverse />
-    </div>
+    </Container>
   );
 };
 

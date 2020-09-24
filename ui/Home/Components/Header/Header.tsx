@@ -1,4 +1,5 @@
-import { Button, Col, Row, Space } from "antd";
+import { Button, Space } from "antd";
+import { Col, Row } from "react-bootstrap";
 import Text from "antd/lib/typography/Text";
 import Title from "antd/lib/typography/Title";
 import React from "react";
@@ -11,13 +12,13 @@ const NavContainer = styled.div`
 export default function Header() {
   return (
     <NavContainer className='header p-3'>
-      <Row justify='space-between' align='middle'>
-        <Col span={6}>
+      <Row>
+        <Col>
           <a className='brand-logo'>
             <Title level={3}>Ecommerce</Title>
           </a>
         </Col>
-        <Col span={6}>
+        <Col>
           <div className='d-flex justify-content-between'>
             <Text>
               <a>Furniture</a>
@@ -33,7 +34,7 @@ export default function Header() {
             </Text>
           </div>
         </Col>
-        <Col span={8}>
+        <Col>
           <Space size={"large"}>
             <a>Set On Ecommerce</a>
             <Button

@@ -1,4 +1,5 @@
-import { Button, Carousel, Col, Row, Space } from "antd";
+import { Button, Carousel, Space } from "antd";
+import { Col, Row } from "react-bootstrap";
 import React from "react";
 import styled from "styled-components";
 
@@ -24,8 +25,8 @@ export default function MainSlider({ slider }: SliderProp) {
       {slider?.map((item: SliderContentProp, index: number) => {
         return (
           <div className='px-5' key={index}>
-            <Row justify='center' align='middle'>
-              <Col className='pr-5'>
+            <Row className='justify-content-center align-items-center'>
+              <Col className='pr-5 text-center'>
                 <h4>{item.title}</h4>
                 <p>{item.description} </p>
                 <Button
@@ -39,7 +40,7 @@ export default function MainSlider({ slider }: SliderProp) {
                   Shop Now
                 </Button>
               </Col>
-              <Col>
+              <Col className='p-2'>
                 <div>
                   <img
                     width='300px'

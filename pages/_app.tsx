@@ -9,7 +9,7 @@ import "../ui/GlobalCSS/global.css";
 export default function MyApp({ Component, pageProps }: any) {
   return (
     <Provider store={store}>
-      <Component {...pageProps} />{" "}
+      <Component {...pageProps} />
     </Provider>
   );
 }
