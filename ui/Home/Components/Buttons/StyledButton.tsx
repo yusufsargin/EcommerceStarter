@@ -14,20 +14,20 @@ export interface StyledComponentProp {
 }
 
 export default function StyledButton({ color, roundSize, size, children, type, textColor }: StyledComponentProp) {
-  const ButtonContainer = styled.div`
-    [class*="ant-btn"] {
-      background-color: ${color};
-      border-radius: ${(roundSize || 10) + "px"};
-      border-color: ${color};
-      color: ${textColor};
-    }
-  `;
+  // const ButtonContainer = styled.div`
+  //   [class*="ant-btn"] {
+  //     background-color: ${color};
+  //     border-radius: ${(roundSize || 10) + "px"};
+  //     border-color: ${color};
+  //     color: ${textColor};
+  //   }
+  // `;
 
   return (
-    <ButtonContainer>
-      <Button size={size} type={type}>
-        {children}
-      </Button>
-    </ButtonContainer>
+    // <ButtonContainer>
+    <Button size={size} type={type}>
+      {children}
+    </Button>
+    // </ButtonContainer>
   );
 }

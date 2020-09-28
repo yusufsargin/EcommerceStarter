@@ -4,6 +4,7 @@ import Next from "next";
 import { AppController } from "./app.controller";
 import { ServeStaticModule } from "@nestjs/serve-static";
 import { join } from "path";
+import { ProductModule } from './product/product.module';
 
 @Module({
   imports: [
@@ -11,6 +12,7 @@ import { join } from "path";
     ServeStaticModule.forRoot({
       rootPath: join(__dirname, "..", "public"),
     }),
+    ProductModule,
   ],
   controllers: [AppController],
 })

@@ -7,3 +7,25 @@ body {
 h5 {
   font-family: "Rubato", sans-serif;
 }
+
+.footer-container .footerText {
+  padding: 0;
+  margin: 0;
+  font-size: 12px;
+  font-family: "Ubuntu", sans-serif;
+}
+
+.footerList {
+  padding: 0;
+}
+
+.footerList li {
+  list-style: none;
+  padding: 0;
+}
+
+.footerTitle {
+  font-weight: bold;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 18px;
+}

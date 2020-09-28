@@ -5,6 +5,7 @@ import React from "react";
 import store from "../ui/redux/store";
 import { Provider } from "react-redux";
 import "../ui/GlobalCSS/global.css";
+import Layout from "ui/Layout/Layout";
 
 export default function MyApp({ Component, pageProps }: any) {
   return (

@@ -1,25 +1,29 @@
-import { Button, Space } from "antd";
+import { Button } from "antd";
 import { Col, Row } from "react-bootstrap";
 import Text from "antd/lib/typography/Text";
 import Title from "antd/lib/typography/Title";
 import React from "react";
 import styled from "styled-components";
 
-const NavContainer = styled.div`
+export const NavContainer = styled.div`
   border-bottom: 1px solid #edeef2;
 `;
 
 export default function Header() {
   return (
-    <NavContainer className='header p-3'>
+    <div
+      className='header p-3'
+      style={{
+        borderBottom: "1px solid #edeef2",
+      }}>
       <Row className='align-items-center'>
-        <Col>
-          <a className='brand-logo'>
+        <Col lg={2}>
+          <a className='brand-logo' href='/'>
             <Title level={3}>Ecommerce</Title>
           </a>
         </Col>
-        <Col>
-          <div className='d-flex justify-content-between'>
+        <Col lg={6}>
+          <div className='d-flex justify-content-around'>
             <Text>
               <a>Furniture</a>
             </Text>
@@ -34,8 +38,8 @@ export default function Header() {
             </Text>
           </div>
         </Col>
-        <Col>
-          <Space size={"large"}>
+        <Col lg={4}>
+          <div className='d-flex justify-content-around align-items-center'>
             <a>Set On Ecommerce</a>
             <Button
               type='primary'
@@ -55,9 +59,9 @@ export default function Header() {
             <a href='#'>
               <i className='fas fa-search'></i>
             </a>
-          </Space>
+          </div>
         </Col>
       </Row>
-    </NavContainer>
+    </div>
   );
 }
