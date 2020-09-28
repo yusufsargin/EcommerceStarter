@@ -5,6 +5,7 @@ import { AppController } from "./app.controller";
 import { ServeStaticModule } from "@nestjs/serve-static";
 import { join } from "path";
 import { ProductModule } from './product/product.module';
+import { CategoryModule } from './category/category.module';
 
 @Module({
   imports: [
@@ -13,6 +14,7 @@ import { ProductModule } from './product/product.module';
       rootPath: join(__dirname, "..", "public"),
     }),
     ProductModule,
+    CategoryModule,
   ],
   controllers: [AppController],
 })

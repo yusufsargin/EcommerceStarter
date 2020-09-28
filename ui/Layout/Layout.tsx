@@ -5,10 +5,10 @@ import Header from "./Header/Header";
 
 export default function Layout({ children }: any) {
   return (
-    <Container fluid>
+    <div>
       <Header />
       {children}
       <Footer />
-    </Container>
+    </div>
   );
 }

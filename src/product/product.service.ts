@@ -19,6 +19,15 @@ export class ProductService {
       price: 100,
       productName: "First Product Test",
       description: "Lorem",
+      originalPrice: 200,
+      variants: [
+        {
+          color: "red",
+        },
+        {
+          color: "blue",
+        },
+      ],
     };
   }
 }
